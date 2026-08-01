@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: web-server
+spec:
+  containers:
+    - name: backend
+      image: forwardzhe/k8s-backend:1.0
+      ports:
+        - containerPort: 8000

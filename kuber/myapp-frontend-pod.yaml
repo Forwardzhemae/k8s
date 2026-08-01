@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod
+  labels:
+    app: frontend
+spec:
+  containers:
+    - name: frontend
+      image: forwardzhe/k8s-frontend:1.0
+      ports:
+        - containerPort: 80
