@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: myapp-backend-deploy
+
+spec:
+  replicas: 3
+
+  selector:
+    matchlabels:
+      app: web-server
+
+    template:
+    metadata:
+      name: myapp-pod
+      labels:
+          app: web-server
+
+      spec:
+        containers:
+          - name: backend
+            image: forwardzhe/k8s-backend:1.1
+
+            ports: 8000
+
+            env:
+              - name: DB_HOST
+                value: "aws-1-ap-southeast-2.pooler.supabase.com"
+
+              - name: DB_PORT
+                value: "5432"
+
+              - name: DB_NAME
+                value: "postgres"
+
+              - name: DB_USER
+                value: "postgres.qvfydmmpwtprafwifvee"
+
+              - name: DB_PASS
+                value: "@Nurly13245"
+
+
+
