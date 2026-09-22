@@ -2,7 +2,9 @@
 
 A RESTful API service built with FastAPI for managing a registry and statistics of esports athletes in Kazakhstan. This project serves as a backend platform to track gamers, their main disciplines, and performance metrics.
 
-*Currently in active development (MVP stage: 50-70% complete). However has some issues(bugs)*
+*Currently in active development (MVP stage: 50-70% complete).*
+
+!! Please pay attention. This project has some issues(bugs) !!
 
 ## 🚀 Tech Stack
 
